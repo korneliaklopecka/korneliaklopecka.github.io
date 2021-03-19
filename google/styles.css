@@ -1,28 +1,23 @@
-body{background-color:;color:;font-family:}h1{background-color:;color:;font-family:}h2{background-color:;color:;font-family:}h3{background-color:;color:;font-family:}h4{background-color:;color:;font-family:}h5{background-color:;color:;font-family:}h6{background-color:;color:;font-family:}p{background-color:;color:;font-family:}pre{background-color:;color:;font-family:}ul{background-color:;color:;font-family:}ol{background-color:;color:;font-family:}
-
-.tfB0Bf input[type="submit"], .gbqfba {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
-  font-family: arial,sans-serif;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+.Ne6nSd {
+display: flex;
+align-items: center;
+padding: 6px;
+padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
 }
-
-.ktLKi {
-  white-space: nowrap;
-  vertical-align: top;
+.n1xJcf {
+height: 60px;
 }
-a.pHiOh {
-  color: #70757a;
+.o3j99 {
+flex-shrink: 0;
+box-sizing: border-box;
+}
+body, input, button {
+font-size: 14px;
+font-family: arial,sans-serif;
+color: #222;
 }
 
 
