@@ -146,9 +146,7 @@ footer a {
 	padding: 12px 11.3px;
 	font-size: 14px;
 }
-footer a:hover {
-	text-decoration: underline;
-}
+
 .links {
 	border-top: 1px solid #ddd;
 	display: flex;
