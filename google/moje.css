@@ -160,26 +160,26 @@ html, body {
     background-color: white;
 }
 
-#bellicon {
-    width: 20px;
-    height: 20px;
-   
-    background-size: 12px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    position: absolute;
-    right: 180px;
-    bottom: 18px;
-}
 
-#profileimage {
-    border-radius: 4px;
-    width: 100px;
-    height: 35px;
-    position: absolute;
-    right: 60px;
-    bottom: 11px;
+nav img {
+	width: 34px;
+	padding: 5px;
+	margin: auto 7px;
+	cursor: pointer;
+}
+nav img:hover {
+	opacity: .8;
+}
+nav button {
+	border: 1px solid #4285f4;
+	font-weight: bold;
+	outline: none;
+	background: #4285f4;
+	color: #fff;
+	padding: 7px 12px;
+	border-radius: 3px;
+	margin-left: 7px;
+	cursor: pointer;
 }
 
 #OPCJE {
