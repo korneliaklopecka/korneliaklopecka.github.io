@@ -106,7 +106,7 @@ html, body {
     bottom: 14px;
 }
 
-#optionsmenuactive::after {
+#opcje_ogólne::after {
     content: '';
     display: block;
     position: absolute;
@@ -192,7 +192,7 @@ html, body {
     bottom: 11px;
 }
 
-#optionsbar {
+#OPCJE {
     width: 100%;
     height: 50px;
     border-width: 0px;
@@ -207,7 +207,7 @@ html, body {
     padding-top: 64px;
 }
 
-#optionsmenu1 {
+#menu1 {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -216,11 +216,11 @@ html, body {
     margin-left: 150px;
 }
 
-#optionsmenu1 li {
+#menu1 li {
     padding: 0px 10px 15px 20px;
 }
 
-#optionsmenuactive {
+#opcje_ogólne {
     color: #4285F4;
     font-weight: bold;
     position: relative;
@@ -373,7 +373,7 @@ html, body {
 }
 
 
-#footer {
+#stopka {
     background-color: rgb(238, 238, 238);
     position: relative;
     left: 0px;
@@ -384,7 +384,7 @@ html, body {
     color: rgb(85, 85, 85);
 }
 
-#footermenu {
+#dolne_menu {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -394,7 +394,7 @@ html, body {
     padding-bottom: 10px;
 }
 
-#footermenu li {
+#dolne_menu li {
     padding-right: 30px;
 }
 
