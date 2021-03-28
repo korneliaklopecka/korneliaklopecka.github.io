@@ -130,12 +130,12 @@ html, body {
     padding: 0px 10px 15px 20px;
 }
 
-#searchresultsarea {
+#allresults {
     margin-left: 150px;
     font-family: 'Arial';
 }
 
-#searchresultsnumber {
+#liczba {
     font-size: 0.8rem;
     color: gray;
 }
