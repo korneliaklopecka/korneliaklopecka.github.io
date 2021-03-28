@@ -227,7 +227,7 @@ html, body {
     z-index: -1;
 }
 
-.searchresult p {
+.result p {
     width: 625px;
     font-size: 13px;
     margin-top: 0px;
