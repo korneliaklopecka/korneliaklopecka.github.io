@@ -140,11 +140,11 @@ html, body {
     color: gray;
 }
 
-.searchresult {
+.result {
     margin-left: 8px;
 }
 
-.searchresult h2 {
+.result h2 {
     font-size: 19px;
     line-height: 18px;
     font-weight: normal;
@@ -153,14 +153,14 @@ html, body {
     margin-top: 25px;
 }
 
-.searchresult a {
+.result a {
     font-size: 14px;
     line-height: 14px;
     color: green;
     margin-bottom: 0px;
 }
 
-.searchresult button {
+.result button {
     font-size: 10px;
     line-height: 14px;
     color: green;
