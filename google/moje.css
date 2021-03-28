@@ -12,7 +12,7 @@ body {
     background-color: white;
 }
 
-#google {
+#searchbarimage {
     height: 30px;
     padding: 0px 28px 10px 30px;
     cursor: pointer;
@@ -85,7 +85,7 @@ html, body {
     outline: none;
 }
 
-#ikony {
+#boxesicon {
     width: 25px;
     height: 25px;
     background-image: url('images/boxes.png');
@@ -160,7 +160,7 @@ html, body {
     background-color: white;
 }
 
-#aplikacje_google {
+#bellicon {
     width: 20px;
     height: 20px;
    
@@ -173,7 +173,7 @@ html, body {
     bottom: 18px;
 }
 
-#zaloguj {
+#profileimage {
     border-radius: 4px;
     width: 100px;
     height: 35px;
@@ -224,14 +224,14 @@ html, body {
     color: rgb(82, 82, 82);
 }
 
-.podobne_wyszukiwania h3 {
+.relatedsearches h3 {
     font-weight: normal;
     font-size: 19px;
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-.lista ul {
+.relatedlists ul {
     list-style: none;
     color: rgb(29, 1, 189);
     padding-left: 0px;
@@ -239,14 +239,14 @@ html, body {
     margin-bottom: 50px;
 }
 
-.lista {
+.relatedlists {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 300px;
 }
 
-.lista ul li {
+.relatedlists ul li {
     margin-bottom: 8px;
 }
 
