@@ -483,6 +483,10 @@ display:none;
 display:none;
 }
 
+.results nav {
+  display: block;
+}
+
 
 
 
