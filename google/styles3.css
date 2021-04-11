@@ -446,50 +446,42 @@
  }
 
 
-  .results .section-1
+.results .section-1
 {
-    display:none;
+display:none;
 }
-
-   .results .links
+.results .links
 {
-    display:none;
+display:none;
 }
-
-   .results .link-1
+.results .link-1
 {
-    display:none;
+display:none;
 }
-   .results .link-2
+.results .link-2
 {
-    display:none;
+display:none;
 }
-
 .results .hide1
 {
 display: none;
 }
-
 .results .logo
 {
-display: none;
+display:none;
 }
-
 .results .footer
 {
- display:none;
+display:none;
 }
-
 .results .footer .h4
 {
- display:none;
+display:none;
 }
-
 .results .s-box
 {
- display:none;
+display:none;
 }
-
 
 
 
