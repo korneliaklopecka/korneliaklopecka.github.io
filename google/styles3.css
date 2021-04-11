@@ -444,3 +444,54 @@
  border-right: 1px solid lightgray;
      padding-right: 25px;   
  }
+
+   .results .section-1
+{
+    display:none;
+}
+
+   .results .links
+{
+    display:none;
+}
+
+   .results .link-1
+{
+    display:none;
+}
+   .results .link-2
+{
+    display:none;
+}
+
+.results .hide1
+{
+display: none;
+}
+
+.results .logo
+{
+display: none;
+}
+
+.results .footer
+{
+ display:none;
+}
+
+.results .footer .h4
+{
+ display:none;
+}
+
+.results .s-box
+{
+ display:none;
+}
+
+
+
+
+
+
+
