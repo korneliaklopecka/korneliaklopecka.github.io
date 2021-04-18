@@ -10,7 +10,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 	<script src="cities.js"></script>
 </head>
-<body class = "home">
+<body>
+	<div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']"> 
       <nav class="usun">
       	<a href="#">Gmail</a>
       	<a href="#">Grafika</a>
@@ -22,7 +23,7 @@
       	<form><br><br>
       		<div class="s-box">
       			<img src="search.svg" class="search-icon">
-      			<input type="text" class="s-input">
+      			<input v-model="googleSearch" type="text" class="s-input">
       			<img src="vs.png" class="vs-icon">
       			<input type="submit" class="s-btn" value="Szukaj w Google">
       			<input type="submit" class="s-btn" value="Szczęśliwy traf">
@@ -50,7 +51,7 @@
         <div id="topbar">
             <img id="searchbarimage" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
             <div id="searchbar" type="text" >
-                <input id="searchbartext" type="text" />
+                <input id="searchbartext" type="text" v-model="googleSearch"/>
                   <button id="searchbarmic">
                  <div id="granica">
                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAJA0oIsYgdH30wmsfIJw7wbuG-dFHwKZMg&usqp=CAU" height=14px;
