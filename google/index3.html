@@ -10,7 +10,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 	<script src="./cities.js"></script>
 </head>
-<body class="home">
+<body>
+	<div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']"> 
       <nav class="usun">
       	<a href="#">Gmail</a>
       	<a href="#">Grafika</a>
