@@ -23,7 +23,7 @@
       			<img src="search.svg" class="search-icon">
       			<input type="text" class="s-input">
       			<img src="vs.png" class="vs-icon">
-      			<input type="submit" class="s-btn" value="Szukaj w Google">
+      			<input type="submit" class="s-btn" v-model="googleSearch" value="Szukaj w Google">
       			<input type="submit" class="s-btn" value="Szczęśliwy traf">
       		</div>
       	</form>
@@ -49,7 +49,7 @@
         <div id="topbar">
             <img id="searchbarimage" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
             <div id="searchbar" type="text" >
-                <input id="searchbartext" type="text" value="Nauka hiszpańskiego" />
+                <input id="searchbartext" type="text" v-model="googleSearch" />
                   <button id="searchbarmic">
                  <div id="granica">
                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAJA0oIsYgdH30wmsfIJw7wbuG-dFHwKZMg&usqp=CAU" height=14px;
