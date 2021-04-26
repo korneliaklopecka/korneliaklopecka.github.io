@@ -185,282 +185,29 @@
     display:none;
 }
 
-.home  #searchbarimage 
-{
-   display:none;
-}
-
-
-
-.home  #searchbarmic 
-{
-  display:none;
-}
-
-
-.home  #searchbarbutton 
-{
-   display:none;
-}
-
-.home  #searchbarbutton svg 
-{
-   display:none;
-}
-
-.home  #searchbarbutton svg path 
-{
-display:none;
-}
-
-.home  #searchbar 
-{
-  display:none;
-}
-
-.home  #searchbar:hover 
-{
-    display:none;
-}
-
-.home  #searchbar > input 
-{
-   display:none;
-}
-
-.home  #searchbar > input:focus 
-{
-    display:none;
-}
-
-.home  #searchbar button 
-{
-     display:none;
-}
-
-.home  #searchbar button:focus 
-{
-      display:none;
-}
-
-.home  #boxesicon 
-{
-      display:none;
-}
-
-.home  #opcje_ogólne::after 
-{
-      display:none;
-}
-
-.home #optionsmenu2 
-{
-      display:none;
-}
-
-.home  #optionsmenu2 li 
-{
-     display:none;
-}
 
 .home #allresults
 {
       display:none;
 }
 
-.home  #liczba
-{
-      display:none;
-}
-
-.home .result
-{
-     display:none;
-}
-
-.home .result h2 
-{
-     display:none;
-}
-
-.home  .result a 
-{
-      display:none;
-}
-
-.home  .result button 
-{
-     display:none;
-}
-
-.home  #bellicon 
-{
-      display:none;
-}
-
-.home  #profileimage 
-{
-      display:none;
-}
-
-.home  #OPCJE
-{
-       display:none;
-}
-
-.home  #menu1 
-{
-       display:none;
-}
-
-.home  #menu1 li 
-{
-     display:none;
-}
-
-.home  #opcje_ogólne
-{
-       display:none;
-}
-
-.home  .result p 
-{
-       display:none;
-}
-
-.home  .relatedsearches h3 
-{
-      display:none;
-}
-
-.home  .relatedlists ul 
-{
-      display:none;
-}
-
-.home  .relatedlists 
-{
-       display:none;
-}
-
-.home  .relatedlists ul li 
-{
-      display:none;
-}
-
-.home  .pagelist 
-{
-       display:none;
-}
-
-.home  .pagelistprevious::before 
-{
-       display:none;
-}
-
-.home  .pagelistprevious::after 
-{
-       display:none;
-}
-
-.home  .pagelistfirst 
-{
-       display:none;
-}
-
-.home  .pagelistnumber::before, .pagelistfirst::before 
-{
-       display:none;
-}
-
-.home  .pagelistnumber::after 
-{
-      display:none;
-}
-
-.home  .pagelistfirst::after 
-{
-       display:none;
-}
-
-.home  .pagelist li 
-{
-       display:none;
-}
-
-.home  .pagelistnext 
-{
-       display:none;
-}
-
-.home  .pagelistnext::before 
-{
-       display:none;
-}
-
-.home .pagelistnext::after 
-{
-       display:none;
-}
 
 .home  #stopka
 {
      display:none;
 }
 
-.home  #dolne_menu 
-{
-      display:none;
-}
-
-.home #dolne_menu li 
-{
-      display:none;
-}
 
 .home #footerlocation 
 {
       display:none;
 }
 
-.home #footerlocation p:nth-of-type(1) 
-{
-      display:none;
-}
 
-.home .blue 
-{
-    display:none;
-}
 
-.home .red 
-{
-     display:none;
-}
 
-.home .green 
-{
-     display:none;
-}
 
-.home .yellow 
-{
-     display:none;
-}
 
-.home table 
-{
-     display:none;
-}
-
-.home .pageNumber 
-{
-   display:none;
-}
-.home #granica
- {
-    display:none;
- }
 
 
 
