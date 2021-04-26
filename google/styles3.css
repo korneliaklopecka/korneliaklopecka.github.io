@@ -500,7 +500,22 @@ display:none;
   display: none;
 }
 
-
+.results .links
+{
+display:none;
+}
+.results .link-1
+{
+display:none;
+}
+.results .link-2
+{
+display:none;
+}
+.results .hide1
+{
+display: none;
+}
 
 
 
