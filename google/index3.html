@@ -36,7 +36,7 @@
               </div>
               <div class="lista">
                   <ul v-for="miasto in filtredCities" @click="uzupelnij(miasto)">
-                      <img class="lupa1" src="lupa.png" title="Szukaj">
+                      <img class="lupa1" src="search.svg" title="Szukaj">
                       {{googleSearch}}<b>{{ miasto.name.substring(googleSearch.length) }}</b>
                   </ul>
               </div>
