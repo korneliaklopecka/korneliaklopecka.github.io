@@ -11,7 +11,7 @@
 	<script src="cities.js"></script>
 </head>
 <body>
-	<div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']"> 
+	<div id="app" :class="[wyszukaj.length > 0 ? 'results' : 'home']"> 
 		
       <nav class="usun">
       	<a href="#">Gmail</a>
@@ -22,13 +22,20 @@
       <section class="section-1">
       	<img src="logo.png" class="logo">
       	<form><br><br>
+	<div class="wyszukaj">
       		<div class="s-box">
-      			<img src="search.svg" class="search-icon">
-      			<input v-model="googleSearch" type="text" class="s-input">
+      			<img src="search.svg" @click="potwierdz" class="search-icon">
+      			<input v-model="googleSearch" @keyup.enter="potwierdz" type="search" class="s-input">
       			<img src="vs.png" class="vs-icon">
-      			<input type="submit" class="s-btn" value="Szukaj w Google">
+      			<input type="submit" @click="potwierdz" class="s-btn" value="Szukaj w Google">
       			<input type="submit" class="s-btn" value="Szczęśliwy traf">
       		</div>
+		<div class="lista">
+                  <ul v-for="miasto in filtredCities" @click="uzupelnij(miasto)">
+                      {{googleSearch}}<b>{{ miasto.name.substring(googleSearch.length) }}</b>
+                  </ul>
+              </div>
+	</div>
       	</form>
       </section>
       <footer>
@@ -248,38 +255,31 @@ width=14px;>
 </body>
 	
 <script>
-  var app = new Vue({
-    el: '#app',
-    data: {
-      googleSearch: '',
-      cities: window.cities,
-    },
-
-    computed: {
-      filteredCities: function() {
-        let result = this.cities.filter(city => city.name.includes(this.googleSearch));
-        if(result.length>10){
-          return result.slice(1,11);
-        }
-        return result;
-      }
-    },
-
-    updated() {
-        this.$nextTick(() => {
-
-        if (this.googleSearch.length > 0) {
-
-        this.$refs.second.focus();
-
-        } else {
-
-        this.$refs.first.focus();
-
-        }
-      })
-    }
-});
+   var app = new Vue({
+                el: "#app",
+                data: {
+                    googleSearch:"",
+                    wyszukaj:"",
+                    cities: window.cities,
+                },
+                computed: {
+                    filtredCities() {
+                        let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
+                        if (this.googleSearch.length > 0) {
+                            return result.slice(0, 10);
+                        }
+                    }
+                },
+                methods: {
+                    potwierdz() {
+                        this.wyszukaj = this.googleSearch
+                    },
+                    uzupelnij(miasto) {
+                        this.googleSearch = miasto.name;
+                        this.wyszukaj = this.googleSearch;
+                    },
+                }
+            })
 </script>
 	
 </html>
