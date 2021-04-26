@@ -203,9 +203,24 @@
       display:none;
 }
 
-.home #OPCJE
+.home  #OPCJE
 {
-      display:none;
+       display:none;
+}
+
+.home  #menu1 
+{
+       display:none;
+}
+
+.home  #menu1 li 
+{
+     display:none;
+}
+
+.home  #opcje_ogólne
+{
+       display:none;
 }
 
 
