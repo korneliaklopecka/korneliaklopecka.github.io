@@ -1,112 +1,115 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Google</title>
-	<link rel="icon"  href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="styles4.css">
-	<link rel="stylesheet" type="text/css" href="styles3.css">
-	<script src="vue.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-	<script src="cities.js"></script>
-</head>
-<body>
-	<div id="app" :class="[wyszukaj.length > 0 ? 'results' : 'home']"> 
-		
-      <nav class="usun">
-      	<a href="#">Gmail</a>
-      	<a href="#">Grafika</a>
-      	<img src="g-menu.png">
-      	<button>Zaloguj się</button>
-      </nav>
-      <section class="section-1">
-      	<img src="logo.png" class="logo">
-      	<form><br><br>
-	<div class="wyszukaj">
-      		<div class="s-box">
-      			<img src="search.svg" @click="potwierdz" class="search-icon">
-      			<input v-model="googleSearch" @keyup.enter="potwierdz" type="search" class="s-input">
-      			<img src="vs.png" class="vs-icon">
-      			<input type="button" @click="potwierdz" class="s-btn" value="Szukaj w Google">
-      			<input type="submit" class="s-btn" value="Szczęśliwy traf">
-      		</div>
-		<div class="lista">
+<html lang="pl">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Google</title>
+    <link rel="icon" href="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png">
+    <link rel="stylesheet" type="text/css" href="styles3.css">
+    <link rel="stylesheet" type="text/css" href="styles4.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./cities.js"></script>
+  </head>
+
+  <body> 
+    <div id="app" :class="[wyszukaj.length > 0 ? 'results' : 'home']"> 
+      
+    <nav class="nav_tools">
+        <a href ="#">Gmail</a>
+        <a href ="#">Grafika</a>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAHlBMVEUAAAD////c3NyGhobZ2dl9fX3o6OiCgoL4+Pi3t7cTiY9IAAABp0lEQVR4nO3dy23DQBBEQZpfKf+EHYH30IcGhq4KoLHvPBK4baH9529HuHksNvf0oTGFCYVdChMKuxQmFHYpTCjsUphQ2KUwobBLYUJhl8KEwi6FCYVdChMKuxQmFHYpTCjsUphQ2KUwobBLYUJhl8KEwi6FCYVdChMKu87Fa65w81psnvFL98z5WbzmPrPNe7H5yTb3fVuMvoPC+RTOp3A+hfMpnE/hfArnUzifwvkUzqdwPoXzKZxvOzLX6sbwfaLN57vYvK/wpfFFZ3V7esLNZ7GZ355S778fKkwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7Hp/4Zzf6of/Yhj0f4vF6DsonE/hfArnUzifwvkUzqdwPoXzKZxP4XwK51M4n8L5/sH3LVJzvlGSev/9UGFCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMLIL9IUYVkcF1KJAAAAAElFTkSuQmCC" class="google_apps" role="button" height="32"></img>
+        <button>Zaloguj się</button>
+    </nav>
+
+    <div class="main">
+    <div class="logo">
+          <img class="google" src="logo.png">
+      </div>
+      <div class="wyszukaj">
+          <div class="pasek">
+              <div class="text">
+                  <div class="widok">
+                      <img class="lupa" src="search.svg" @click="potwierdz" title="Szukaj">
+                      <input v-model="googleSearch" @keyup.enter="potwierdz" type="search">
+                      <img class="mikro" src="vs.png" title="Wyszukiwanie głosowe">
+                  </div>
+              </div>
+              <div class="lista">
                   <ul v-for="miasto in filtredCities" @click="uzupelnij(miasto)">
-			  <img class="lupa1" src="lupa.png" title="Szukaj">
+                      <img class="lupa1" src="lupa.png" title="Szukaj">
                       {{googleSearch}}<b>{{ miasto.name.substring(googleSearch.length) }}</b>
                   </ul>
               </div>
-	</div>
-      	</form>
-      </section>
-      <footer>
-      	<h4 class="hide1">Polska</h4>
-      	<div class="links">
-      		<div class="link-1">
-      			<a href="#">O nas</a>
-      			<a href="#">Reklamuj się</a>
-      			<a href="#">Dla firm</a>
-      			<a href="#">Jak działa wyszukiwarka</a>
-      		</div>
-      		<div class="link-2">
-      			<a href="#">Prywatność</a>
-      			<a href="#">Warunki</a>
-      			<a href="#">Ustawienia</a>
-      		</div>
-      	</div>
-      </footer>
+          </div>
+          <div class="przyciski">
+              <div class="buttons">
+                  <button class="przycisk1" @click="potwierdz" type="button">Szukaj w Google</button>
+                  <button class="przycisk2" type="button" onclick="location.href=''">Szczęśliwy traf</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
-<div id="header">
-        <div id="topbar">
-            <img id="searchbarimage" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
-            <div id="searchbar" type="text" >
-                <input id="searchbartext" type="text" v-model="googleSearch"/>
-                  <button id="searchbarmic">
-                 <div id="granica">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAJA0oIsYgdH30wmsfIJw7wbuG-dFHwKZMg&usqp=CAU" height=14px;
-width=14px;>
-                      </div>
-                     </button>
-                  <button id="searchbarmic">
-                   
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXH5otAU7A3p9HJDtfQrtNVEss4NLlfrM0a7W1gSO6Th-ILA2DCVKPjpkkcO1VRhgRtYc&usqp=CAU" height=24px width=24px />
-           
-                </button>
-
-                <button id="searchbarbutton">
-                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
-                </button>
+    <footer class="stopka">
+        <h4>Polska</h4>
+        <div class="typ">
+            <div class="typ1">
+                <a href="#">O nas</a>
+                <a href="#">Reklamuj się</a>
+                <a href="#">Dla firm</a>
+                <a href="#">Jak działa wyszukiwarka</a>
             </div>
-
-            <div id="boxesicon"></div>
-            <div id="bellicon"><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" height=24px width=24px></div>
-            <img id="profileimage" src="https://www.logistycypomagaja.pl/assets/google_icon-d502b2ed3546a003d4cd943173358ba25e668a53eb353c66ab1b51f6654dec0b.png" >
-        </div>
-        <div id="OPCJE">
-            <ul id="menu1">
-                <li id="opcje_ogólne">Wszystko</li>
-                <li>Wiadomości</li>
-                <li>Wideo</li>
-                <li>Zdjęcia</li>
-                <li>Mapy</li>
-                <li>Więcej</li>
-                <li>Opcje</li>
-                <li>Narzędzia</li>
-            </ul>
-
            
-              
-            
+          <div class="typ2">
+          <a href="#"><class="neutralnosc">Neutralność węglowa od 2007</a>
+          
+          
+          <div class="typ3">
+                <a href="#">Prywatność</a>
+                <a href="#">Warunki</a>
+                <a href="#">Ustawienia</a>
+            </div>
         </div>
-    </div>
-    <div id="allresults">
-        <p id="liczba">Około  17 500 000 wyników (0,72 s)  </p>
-	    
-      
+    </footer>
+
+    
+    <div class="topbar">
+
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="">
+
+        <ul class="opcje">
+          <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAHlBMVEUAAAD////c3NyGhobZ2dl9fX3o6OiCgoL4+Pi3t7cTiY9IAAABp0lEQVR4nO3dy23DQBBEQZpfKf+EHYH30IcGhq4KoLHvPBK4baH9529HuHksNvf0oTGFCYVdChMKuxQmFHYpTCjsUphQ2KUwobBLYUJhl8KEwi6FCYVdChMKuxQmFHYpTCjsUphQ2KUwobBLYUJhl8KEwi6FCYVdChMKu87Fa65w81psnvFL98z5WbzmPrPNe7H5yTb3fVuMvoPC+RTOp3A+hfMpnE/hfArnUzifwvkUzqdwPoXzKZxvOzLX6sbwfaLN57vYvK/wpfFFZ3V7esLNZ7GZ355S778fKkwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7Hp/4Zzf6of/Yhj0f4vF6DsonE/hfArnUzifwvkUzqdwPoXzKZxP4XwK51M4n8L5/sH3LVJzvlGSev/9UGFCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMIuhQmFXQoTCrsUJhR2KUwo7FKYUNilMKGwS2FCYZfChMLIL9IUYVkcF1KJAAAAAElFTkSuQmCC" class="google_apps" role="button" height="32"></a></li>
+          <li><button class="signIn" type="button" name="button">Zaloguj się</button></li>
+        </ul>
+
+        <div class="searchgoogle">
+
+          <div class="elements">
+            <input ref="second" type="text" v-model="googleSearch">
+            <img src="search.svg" class="lupa">
+            <img src="vs.png" class="mikrofon">
+            <div class="line"></div>
+            <img src="close.png" class="x">
+          </div>
+
+          <ul class="optionsbar">
+            <li class="lewo all"><a href="#">Wszystko</a></li>
+            <li class="lewo"><a href="#">Wiadomości</a></li>
+            <li class="lewo"><a href="#">Grafika</a></li>
+            <li class="lewo"><a href="#">Wideo</a></li>
+            <li class="lewo"><a href="#">Mapy</a></li>
+            <li class="lewo"><a href="#">Więcej</a></li>
+            <li class="lewo"><a class="tools" href="#">Narzędzia</a></li>
+            <li class="lewo"><a href="#">Ustawienia</a></li>
+          </ul>
+          
+        </div>
+
+    </div> 
+    <div class="searchResults">
+
+        <p class="searchnumber">Około  17 500 000 wyników (0,72 s)</p>
+
         <div class="result">
             <h2>Podstawyhiszpanskiego.pl | Samouczek hiszpańskiego ...</h2>
             <a>https://podstawyhiszpanskiego.pl/ </a> <button>▼</button>
@@ -168,32 +171,35 @@ width=14px;>
             <a>https://www.sprachcaffe.com/polski/kursy_hiszpanskiego.htm</a> <button>▼</button>
             <p>Wszystkie nasze lekcje hiszpańskiego w internecie. Zaprojektuj swój kurs online. Hiszpański: kursy językowe w Barcelonie i Maladze lub na Kubie ..</p>
         </div>
-        <div class="relatedsearches">
-            <h3>Podobne wyszukiwania</h3>
+
+        <br>
+
+        <div class="help">
+
+          <h3>Podobne wyszukiwania</h3>
             <div class="relatedlists">
                 <ul class="relatedleft">
-                    <li>Nauka hiszapńskiego<br> <b>w domu</b></li>
-                    <li><b>Nauka hiszpańskiego</b> książka </li>
-                    <li><b>Nauka hiszpańskiego</b> aplikacja </li>
-                    <li><b>Nauka hiszpańskiego</b> YouTube</li>
+                    <a id="pomoc1" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Nauka hiszapńskiego w domu</a>
+                    <a id="pomoc2" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Nauka hiszpańskiego książka</a>
+                    <a id="pomoc3" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Nauka hiszpańskiego aplikacja</a>
+                    <a id="pomoc4" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Nauka hiszpańskiego YouTube</a>
                 </ul>
                 <ul class="relatedright">
-                    <li><b>Szybka</b> nauka hiszpańskiego</li>
-                    <li><b>Strony</b> do nauki hiszpańskiego</li>
-                    <li><b> Kurs</b> hiszpańskiego</li>
-                    <li><b>Język</b> hiszpański</li>
+                    <a id="pomoc5" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Szybka nauka hiszpańskiego</a>
+                    <a id="pomoc6" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Stronu do nauki hiszpańskiego</a>
+                    <a id="pomoc7" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Kurs hiszpańskiego</a>
+                    <a id="pomoc8" type="text"><img src="search.svg" class="lupka" alt="Lupa Google" href="#">Język hiszpański</a>
                 </ul>
             </div>
+
         </div>
 
-        <div class="pagebar">
-            <ul class="pagelist">
-                
-       <table>
+        <br><br>
+
+          <table class="googlelist">
             <tr>
               <td><span class="blue">G</span></td>
               <td><span class="red">o</span></td>
-              <td><span class="yellow">o</span></td>
               <td><span class="yellow">o</span></td>
               <td><span class="yellow">o</span></td>
               <td><span class="yellow">o</span></td>
@@ -207,46 +213,50 @@ width=14px;>
               <td><span class="green">l</span></td>
               <td><span class="red">e</span></td>
               <td rowspan="2" style="width: 10px;"></td>
-              <td><span class="blue"><i class="fas fa-angle-right"></i></span></td>
+              <td><span class="blue arrow">></span></td>
             </tr>
+
             <tr>
-              <td class="pageNumber"></td>
-              <td class="pageNumber"></td>
-              <td class="pageNumber">1</td>
-              <td class="pageNumber">2</td>
-              <td class="pageNumber">3</td>
-              <td class="pageNumber">4</td>
-              <td class="pageNumber">5</td>
-              <td class="pageNumber">6</td>
-              <td class="pageNumber">7</td>
-              <td class="pageNumber">8</td>
-              <td class="pageNumber">9</td>
-              <td class="pageNumber">10</td>
+              <td class="numer"></td>
+              <td class="numer">1</td>
+              <td class="numer">2</td>
+              <td class="numer">3</td>
+              <td class="numer">4</td>
+              <td class="numer">5</td>
+              <td class="numer">6</td>
+              <td class="numer">7</td>
+              <td class="numer">8</td>
+              <td class="numer">9</td>
+              <td class="numer">10</td>
               <td colspan="3"></td>
-              <td class="pageNumber">Next</td>
+              <td class="numer">Następna</td>
             </tr>
+
           </table>
-            </ul>
-        </div>
-    </div>
 
-    <div id="stopka" style="hide">
-        <div id="footerlocation">
-   
-   <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAAA1BMVEVwdXoRE0AbAAAANElEQVR4nO3BMQEAAADCoPVP7WsIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAN1+AABVhDU2QAAAABJRU5ErkJggg==" width=10px height=10px style="border-radius: 100%" > Krowodrza, Kraków </p>
-          <p> - Na podstawie twojej wcześniejszej aktywności - Użyj dokładnej lokalizacji - Dowiedz się więcej</p>
-        </div>
+      </div>
 
-        <ul id="dolne_menu">
-            <li>Pomoc</li>
-            <li>Prześlij opinię</li>
-            <li>Prywatność</li>
-            <li>Warunki</li>
+      <div class="infopasek">
+
+        <div class="locationpasek">
+        <p>
+          <a class="panstwo">Polska</a>
+          <a class="miasto"><strong>Kraków</strong> - Na podstawie Twojej wcześniejszej aktywności </a>
+          <a class ="inne">- Użyj dokładnej lokalizacji</a><a class ="loc_more"> - Dowiedz się więcej</a>
+        </p>
+      </div>
+
+        <ul>
+            <li><a href="#">Pomoc</a></li>
+            <li><a href="#">Prześlij opinię</a></li>
+            <li><a href="#">Prywatność</a></li>
+            <li><a href="#">Warunki</a></li>
         </ul>
+        
+      </div>
     </div>
-
 </body>
-	
+
 <script>
    var app = new Vue({
                 el: "#app",
@@ -274,5 +284,4 @@ width=14px;>
                 }
             })
 </script>
-	
 </html>
