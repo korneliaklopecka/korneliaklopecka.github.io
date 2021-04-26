@@ -58,6 +58,17 @@
 	margin: 0px auto;
 	margin-top: 107px;
 }
+.home .wyszukaj
+{
+    display: block;
+    justify-content: center;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+	width: 500px;
+}
+
 .home .s-box {
 	width: 580px;
 	margin: 0px auto;
