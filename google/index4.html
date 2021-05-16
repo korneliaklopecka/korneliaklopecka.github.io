@@ -44,6 +44,8 @@
               </div>
           </div>
           <div class="przyciski">
+                <v-autocompleter :options="cities" @click="handleClick(city.name)" @enter="eventHandler($googleSearch)">
+                </v-autocompleter>
               <div class="buttons">
                   <button class="przycisk1" @click="potwierdz" type="button">Szukaj w Google</button>
                   <button class="przycisk2" type="button" onclick="location.href=''">Szczęśliwy traf</button>
