@@ -1,5 +1,5 @@
 Vue.component('v-autocompleter', {
-    template: ' <div><img src="search.svg" class="widok"><input @change="zmiana" @keyup.enter="powtierdź" v-model="googleSearch" type="search"><div class="lista" :class="{widok : googleSearch.length > 0 && filtredCities.length>0}></div></div>'
+    template: ' <div><img src="search.svg" class="widok"><input @change="zmiana" @keyup.enter="potwierdź" v-model="googleSearch" type="search"><div class="lista" :class="{widok : googleSearch.length > 0 && filtredCities.length>0}></div></div>'
           data: function() {
             return {
                     googleSearch:"",
