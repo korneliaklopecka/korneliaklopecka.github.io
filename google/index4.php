@@ -11,7 +11,7 @@
     <script src="cities.js"></script>
     <link href="autocompleter.css" rel="stylesheet" type="text/css">
     <script src="autocompleter.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body> 
