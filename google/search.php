@@ -2,12 +2,12 @@
 $citiesString = file_get_contents("./cities.json");
 
 if($citiesString == false){
-    die('No such file or directory');
+    die('Taki plik nie istnieje');
 }
 
 $citiesJSON = json_decode($citiesString, true);
 if($citiesJSON == null){
-    die('Could not parse JSON');
+    die('Błąd!');
 }
 
 $returnedArray = [];
